@@ -62,7 +62,7 @@
         <span x-show="open2" x-transition>a content #2</span>
     </div>
     <!--Add or Remove Content-->
-    <h3>9. Add or Remove Content</h3>
+    <h3>9. Add or Remove Element</h3>
     <div x-data="{box:[{
             id: 1,
             title: 'Hunter x Hunter',
@@ -78,8 +78,11 @@
         }
         ]}">
         <template x-for="comic in box">
-            <!--contain only one root-->
-            <h4 x-text="comic.title"></h4>
+            <!--contain only one root element but can add more root inside root element-->
+            <div>
+                <h4 x-text="comic.title"></h4>
+                <span x-text="comic.genre"></span>
+            </div>
         </template>
     </div>
 </body>
