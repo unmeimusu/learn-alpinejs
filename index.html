@@ -77,9 +77,10 @@
             genre: 'fantasy'
         }
         ]}">
-        <template x-for="comic in box">
+        <template x-for="(comic,index) in box">
             <!--contain only one root element but can add more root inside root element-->
             <div>
+                <p x-text="index : comic.id"></p>
                 <h4 x-text="comic.title"></h4>
                 <span x-text="comic.genre"></span>
             </div>
