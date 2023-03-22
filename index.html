@@ -7,6 +7,7 @@
     <title>Learn AlpineJS</title>
     <script src="./cdn.min.js" defer></script>
     <style>
+        /*#3 Binding*/
         .hidden {
             display: none;
         }
@@ -16,21 +17,25 @@
     <div>
         <ul>
             <li><a href="#min">static data output</a></li>
+
         </ul>
     </div>
     <!--1 Static Data-->
+    <h3>1. Static Data</h3>
     <div id="min" x-data="{message:'Hello I ❤️ AlpineJS'}">
         <span x-text="message"></span>
     </div>
     <!--2 Static HTML Data-->
+    <h3>2. Static HTML Data</h3>
     <div x-data="{html:'<p>How are you?<br>Nice to meet you.</p>'}">
         <span x-html="html"></span>
     </div>
     <!--3 Binding-->
+    <h3>3. A Hidden Text Below</h3>
     <div
     x-data="{open:false}"
     x-bind:class="! open ? 'hidden' : ''">
     Hidden Text</div>
-
+    <!--4 Switch Button-->
 </body>
 </html>
