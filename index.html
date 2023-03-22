@@ -21,6 +21,7 @@
     <div x-data="{html:'<p>How are you?<br>Nice to meet you.</p>'}">
         <span x-html="html"></span>
     </div>
-    <!--X-Bind-->
+    <!--Binding-->
+    <div x-bind:class="! open = 'hidden' : ''"></div>
 </body>
 </html>
