@@ -63,10 +63,23 @@
     </div>
     <!--Add or Remove Content-->
     <h3>9. Add or Remove Content</h3>
-    <div>
-    <template x-for="post in posts">
-        
-    </template>
+    <div x-data="{box:[{
+            id: 1,
+            title: "Hunter X Hunter",
+            genre: ["action","thriller"]
+        }, {
+            id: 2,
+            title: "Gintama",
+            genre: "comedy"
+        }, {
+            id: 3,
+            title: "Monster Hunter",
+            genre: "fantasy"
+        }
+        ]}">
+        <template x-for="comic in box">
+            <div x-text="comic.title"></div>
+        </template>
     </div>
 </body>
 </html>
