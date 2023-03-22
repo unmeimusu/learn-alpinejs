@@ -42,8 +42,14 @@
         <button x-on:click="open = ! open">Show/Hide</button>
         <div x-bind:class="open ? '' : 'hidden'">Hello World!</div>
     </div>
-    <!--5. Dynamic Text-->
+    <!--5. Dynamic Text NotShowing-->
     <h3>5. Dynamic Text from JS</h3>
-    <span x-text="new Date().getFullYear()"></span>
+    <div x-text="new Date().getFullYear()"></div>
+    <!--6. Two-Way Data Binding-->
+    <h3>6. Two-Way Data Binding</h3>
+    <div x-data="{txt:''}">
+        <input type="text" x-model="txt">
+        <div>Inputted Text:<span x-text="txt"></span></div>
+    </div>
 </body>
 </html>
