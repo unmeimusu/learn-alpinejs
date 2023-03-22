@@ -65,20 +65,21 @@
     <h3>9. Add or Remove Content</h3>
     <div x-data="{box:[{
             id: 1,
-            title: "Hunter X Hunter",
-            genre: ["action","thriller"]
+            title: 'Hunter x Hunter',
+            genre: ['action','thriller']
         }, {
             id: 2,
-            title: "Gintama",
-            genre: "comedy"
+            title: 'Gintama',
+            genre: 'comedy'
         }, {
             id: 3,
-            title: "Monster Hunter",
-            genre: "fantasy"
+            title: 'Monster Hunter',
+            genre: 'fantasy'
         }
         ]}">
         <template x-for="comic in box">
-            <div x-text="comic.title"></div>
+            <!--contain only one root-->
+            <h4 x-text="comic.title"></h4>
         </template>
     </div>
 </body>
