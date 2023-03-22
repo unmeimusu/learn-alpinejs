@@ -15,17 +15,17 @@
 <body>
     <div>
         <ul>
-            <li><a href="#min">static data output</a></li>
+            <li><a href="#min">data output</a></li>
             <li><a href="#cls">conditional class</a></li>
         </ul>
     </div>
-    <!--1 Static Data-->
-    <h3>1. Static Data</h3>
+    <!--1 Data-->
+    <h3>1. Data</h3>
     <div id="min" x-data="{message:'Hello I ❤️ AlpineJS'}">
         <span x-text="message"></span>
     </div>
-    <!--2 Static HTML Data-->
-    <h3>2. Static HTML Data</h3>
+    <!--2 HTML Data-->
+    <h3>2. HTML Data</h3>
     <div x-data="{html:'<p>How are you?<br>Nice to meet you.</p>'}">
         <span x-html="html"></span>
     </div>
@@ -80,7 +80,8 @@
         <template x-for="(comic,index) in box">
             <!--contain only one root element but can add more root inside root element-->
             <div>
-                <p x-text="index : comic.id"></p>
+                <span x-text="index + ':'"></span>
+                <span x-text="comic.id"></span>
                 <h4 x-text="comic.title"></h4>
                 <span x-text="comic.genre"></span>
             </div>
