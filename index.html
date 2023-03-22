@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn AlpineJS</title>
     <script src="./cdn.min.js" defer></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -13,15 +18,16 @@
             <li><a href="#min">static data output</a></li>
         </ul>
     </div>
-    <!--Static Data-->
+    <!--1 Static Data-->
     <div id="min" x-data="{message:'Hello I ❤️ AlpineJS'}">
         <span x-text="message"></span>
     </div>
-    <!--Static HTML Data-->
+    <!--2 Static HTML Data-->
     <div x-data="{html:'<p>How are you?<br>Nice to meet you.</p>'}">
         <span x-html="html"></span>
     </div>
-    <!--Binding-->
-    <div x-bind:class="! open = 'hidden' : ''"></div>
+    <!--3 Binding-->
+    <div x-bind:class="! open ? 'hidden' : ''"></div>
+
 </body>
 </html>
