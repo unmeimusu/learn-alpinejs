@@ -88,5 +88,13 @@
             </div>
         </template>
     </div>
+    <!--Conditional Element-->
+    <h3>10. Conditional Element</h3>
+    <template x-data="{open: true}" x-if="open">
+        <!--It does'nt support x-transition-->
+        <div>
+            Hello I'm Open!
+        </div>
+    </template>
 </body>
 </html>
