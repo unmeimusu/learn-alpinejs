@@ -141,11 +141,19 @@
     <h3>16. DOM Selector</h3>
     <!--replacement of getElementByID or querySelector-->
     <button x-on:click="$refs.selectd.remove()">
-        <!--remove selected DOM with JS NotWorking-->
+        <!--remove selected DOM with JS, NotWorking-->
         Remove Text
     </button>
-    <span x-ref="selectd">   
+    <span x-ref="selectd">  
         Selected content here.
     </span>
+    <h3>17. Teleporting Modal</h3>
+    <div x-data="{open: false}">
+        <button x-on:click="open = ! open">Open/Close</button>
+        <template x-teleport="#cover">
+            <div x-show="open">Another content inside cover element.</div>
+        </template>
+        <div id="cover">Text inside cover element</div>
+    </div>
 </body>
 </html>
