@@ -151,6 +151,7 @@
     <div x-data="{open: false}">
         <button x-on:click="open = ! open">Open/Close</button>
         <template x-teleport="#cover">
+            <!--worked inside template tag-->
             <div x-show="open">Another content inside cover element.</div>
         </template>
         <div id="cover">Text inside cover element</div>
