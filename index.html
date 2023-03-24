@@ -97,5 +97,55 @@
             Hello I'm open right now.
         </div>
     </template>
+    <h3>11. Hide Element Before Initializing</h3>
+    <!--Hide element to prevent glitch effect before Alpinejs initialized-->
+    <div x-data="{open: false}" x-show="open" x-cloak>
+        <p>
+            Don't be sad, keep smiling without glitching.
+        </p>
+    </div>
+    <h3>12. Ignore Element Before Crawling</h3>
+    <!--Ignore elemtent to be crawled and initialized by Alpinejs-->
+    <div x-data="{credit: "by AlpineJS"}">
+        <div x-text="credit">
+        </div>
+        <div x-ignore>
+            <span x-text="credit"></span>
+        </div>
+    </div>
+    <h3>13. Run the script with each change.</h3>
+    <!--The script repeated each time a dependency changed-->
+    <div x-data="{count: 0}" >
+        <button x-on:click="count++">Increment</button>
+        <div x-effect="console.log('Count:' + count )">
+            <!--Output displayed on Console Browser-->
+        </div>
+    </div>
+    <h3>14. Initialize script by AlpineJS</h3>
+    <!--The script initialized by AlpineJS-->
+    <div x-init="date = new Date().getFullYear()">
+        <!--running after AlpineJS initialized-->
+        <p x-text="date">
+        </p>
+    </div>
+    <h3>15. Modelable dependency</h3>
+    <!--Remodeling dependency-->
+    <div x-data="{count: 11}">
+        <div x-data="{value: 0}" x-modelable="value" x-model="count">
+            <button x-on:click="value++">
+                Add Value
+            </button>
+            <p>Count: <span x-text="count"></span></p>
+        </div>
+    </div>
+    <h3>16. DOM Selector</h3>
+    <!--replacement of getElementByID or querySelector-->
+    <button x-on:click="$refs.selectd.remove()">
+        <!--remove selected DOM with JS NotWorking-->
+        Remove Text
+    </button>
+    <span x-ref="selectd">   
+        Selected content here.
+    </span>
 </body>
 </html>
