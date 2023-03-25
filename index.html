@@ -158,5 +158,12 @@
         </template>
         <div id="cover">Text inside cover element</div>
     </div>
+    <h3>18. Reusable ID</h3>
+    <!--make same ID reusable-->
+    <div x-data>
+        <!--wrapped inside dataless component to be worked-->
+        <input x-bind:id="$id('my-id')" type="text">
+        <input x-bind:id="$id('my-id')" type="text">
+    </div>
 </body>
 </html>
