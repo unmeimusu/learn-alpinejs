@@ -5,5 +5,20 @@ document.addEventListener('alpine:init',()=>{
         toggle() {
             this.open = ! this.open
         }
+    })),
+    Alpine.data('drpd-att',()=>({
+        open: false,
+
+        trigger: {
+            ['x-on:click']() {
+                this.open = ! this.open
+            }
+        },
+        
+        dialogue: {
+            ['x-show']() {
+                open
+            }
+        }
     }))
 })
