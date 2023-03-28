@@ -6,7 +6,7 @@ document.addEventListener('alpine:init',()=>{
             this.open = ! this.open
         }
     })),
-    Alpine.data('drpd-att',()=>({
+    Alpine.data('drpd_att',()=>({
         open: false,
 
         trigger: {
@@ -17,7 +17,7 @@ document.addEventListener('alpine:init',()=>{
         
         dialogue: {
             ['x-show']() {
-                open
+                return this.open
             }
         }
     }))

@@ -177,7 +177,8 @@
         <div x-show="open">Hello, I'm example number 2</div>
     </div>
     <h3>20. Reusable Attribute</h3>
-    <div x-data="drpd-att">
+    <div x-data="drpd_att">
+        <!--always use underscore for identification rather than hyphen (-)-->
         <button x-bind="trigger">Click Me</button>
         <div x-bind="dialogue">Hide or Show this sentence.</div>
     </div>
