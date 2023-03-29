@@ -92,7 +92,7 @@
     <!--Conditional Element-->
     <h3>10. Conditional Element</h3>
     <template x-data="{open: true}" x-if="open">
-        <!--It does'nt support x-transition-->
+        <!--It doesn't support x-transition-->
         <div>
             Hello I'm open right now.
         </div>
@@ -159,7 +159,7 @@
         <div id="cover">Text inside cover element</div>
     </div>
     <h3>18. Reusable ID</h3>
-    <!--make same ID reusable-->
+    <!--make a new id ordered number-->
     <div x-data>
         <!--wrapped inside dataless component to be worked-->
         <input x-bind:id="$id('my-id')" type="text">
@@ -169,11 +169,11 @@
     <div x-data="dropdown">
     <!--1. With JS-->
         <button @click="toggle">Open/Close</button>
-        <div x-show="open">Here I'm</div>
+        <div x-show="open">Here I'm here</div>
     </div>
     <div x-data="drpd">
     <!--2. With JS Modul. NotWorking-->
-        <button @click="toggle">Open/Close from Module</button>
+        <button x-on:click="toggle">Open/Close from Module</button>
         <div x-show="open">Hello, I'm example number 2</div>
     </div>
     <h3>20. Reusable Attribute</h3>
@@ -185,7 +185,7 @@
     <h3>21. Store Data</h3>
     <div>
     </div>
-    <script src="./app.js"></script>
+    <!--<script src="./app.js"></script>-->
     <script type="module" src="./appm.js"></script>
 </body>
 </html>
